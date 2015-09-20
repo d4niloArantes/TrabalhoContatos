@@ -1,0 +1,4 @@
+user;contato;tel
+joao;Manoel;9988-7777
+joao;Cecilia;8843-0000
+d4n1l0;Dirox;32103700;id=4
