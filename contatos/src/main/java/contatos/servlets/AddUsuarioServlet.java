@@ -19,7 +19,7 @@ public class AddUsuarioServlet extends HttpServlet
 	Mensagens men = new Mensagens();
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
-	{	
+	{
 		//recupero os dados do navegador
 		String loginUsuario = req.getParameter("login");
 		String senhaUsuario = req.getParameter("senha");

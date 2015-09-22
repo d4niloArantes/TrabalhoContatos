@@ -50,6 +50,7 @@ public class AddContatoServlet extends HttpServlet
 			linha = entradaString.readLine();
 			cont++;
 		}
+		entradaString.close();
 		return cont;
 	}
 	

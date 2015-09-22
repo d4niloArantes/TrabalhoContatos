@@ -27,17 +27,15 @@ public class LoginServlet extends HttpServlet
 		{
 			writer.write(mem.mensagemLoginInvalido());			
 		}else{		
-			//comparo se tenho o nomeLogin cadastrado		
 			FileInputStream entrada = new FileInputStream("/home/daniloarantes/git/TrabalhoContatos/contatos/src/users.txt");
 			InputStreamReader entradaFormatada = new InputStreamReader(entrada);
 			BufferedReader entradaString = new BufferedReader(entradaFormatada);
 		    
 			boolean bool = false;
-			String linha;
+			String linha = entradaString.readLine();
 			
-			do
+			while(linha != null)
 			{
-				linha = entradaString.readLine();
 				if( linha.contains(nomeLogin) )
 				{
 					if( linha.contains(senhaLogin) )
@@ -54,8 +52,8 @@ public class LoginServlet extends HttpServlet
 					bool = true;
 					break;
 				}
+				linha = entradaString.readLine();
 			}
-			while(linha != null);
 			
 			if( !bool )
 				writer.write(mem.mensagemLoginInvalido());
